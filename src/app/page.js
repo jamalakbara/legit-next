@@ -2,6 +2,7 @@
 import Card from '@/components/Card/card';
 import Heading from '@/components/Heading/heading';
 import Paragraph from '@/components/Paragraph/paragraph';
+import SliderAlt from '@/components/Slider Alt/sliderAlt';
 import Slider from '@/components/Slider/slider'
 import Image from 'next/image';
 
@@ -47,6 +48,21 @@ const cards_why = [
     },
     heading: 'Expertise',
     desc: 'With team of experienced tax accountants who are familiar with cryptocurrency taxation'
+  },
+]
+
+const cards_reviews = [
+  {
+    desc: 'as cryptocurrency investor, understanding the tax regulations was a nightmare until I found this platform'
+  },
+  {
+    desc: '“Legite made filing my cryptocurrency taxes a breeze. They were knowledgeable, helpful, and affordable."'
+  },
+  {
+    desc: 'Legite helped me save a lot of money on my cryptocurrency taxes. They were thorough and efficient.'
+  },
+  {
+    desc: '“Legite has been an absolute game-changer for me as a cryptocurrency investor.”'
   },
 ]
 
@@ -133,6 +149,16 @@ export default function Home() {
         <div className="absolute top-0 right-0">
           <Image src="/img/why-1.png" alt="why bg" width={160} height={100} />
         </div>
+      </section>
+
+      {/* Review */}
+
+      <section className="flex flex-col gap-14 items-center justify-center py-40 bg-figma-yellow">
+        <Heading>
+          What they say about us
+        </Heading>
+
+        <SliderAlt sliderItems={cards_reviews} />
       </section>
     </>
   )

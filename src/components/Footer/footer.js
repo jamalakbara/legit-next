@@ -15,7 +15,7 @@ const Footer = () => {
         </h2>
 
         <span className="text-xl">
-            © 2023 Legite. All rights reserved.
+            2023 Legite. All rights reserved.
         </span>
     </footer>
   )

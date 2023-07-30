@@ -3,7 +3,7 @@ import Paragraph from "../Paragraph/paragraph"
 
 const Card = ({img, heading, desc, number}) => {
   return (
-    <div className="text-figma-black p-14 flex flex-col gap-8 bg-white rounded-3xl relative">
+    <div className="text-figma-black p-14 flex flex-col gap-8 bg-white rounded-3xl relative flex-1">
       {
         img && (
           <Image src={img.src} alt={img.alt} width={46} height={46} />

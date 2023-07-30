@@ -25,6 +25,7 @@ module.exports = {
       },
       backgroundPosition: {
         "figma-right-top": "right top 100px",
+        "figma-left-bottom": "left bottom 100px",
       }
     },
   },

@@ -5,7 +5,7 @@ import Paragraph from '@/components/Paragraph/paragraph';
 import Slider from '@/components/Slider/slider'
 import Image from 'next/image';
 
-const cards = [
+const cards_about = [
   {
     number: 1,
     heading: 'Develop',
@@ -20,6 +20,33 @@ const cards = [
     number: 3,
     heading: 'Update',
     desc: 'Regularly update the content to reflect any changes in tax laws and regulations to ensure investors have access to the latest information.'
+  },
+]
+
+const cards_why = [
+  {
+    img: {
+      src: '/img/cost.svg',
+      alt: 'cost'
+    },
+    heading: 'Cost Savings',
+    desc: 'The cost of hiring a tax accountant can be prohibitive for you. By using a website that provides tax services, you can save money on the cost of tax preparation. '
+  },
+  {
+    img: {
+      src: '/img/time.svg',
+      alt: 'time'
+    },
+    heading: 'Time Savings',
+    desc: 'By using a website that provides tax services, you can save yourself a significant amount of time and hassle. '
+  },
+  {
+    img: {
+      src: '/img/expertise.svg',
+      alt: 'expertise'
+    },
+    heading: 'Expertise',
+    desc: 'With team of experienced tax accountants who are familiar with cryptocurrency taxation'
   },
 ]
 
@@ -72,12 +99,39 @@ export default function Home() {
           </Paragraph>
         </div>
 
-        <div className='flex gap-20 items-center mt-40'>
+        <div className='flex gap-20 mt-40 items-stretch'>
           {
-            cards.map((card, index) => (
+            cards_about.map((card, index) => (
               <Card key={index} {...card} />
             ))
           }
+        </div>
+      </section>
+
+      {/* Why */}
+      <section className="flex flex-col gap-14 justify-center px-56 py-40  min-h-screen bg-figma-purple bg-no-repeat bg-figma-left-bottom relative" style={
+        {
+          backgroundImage: "url('/img/why-bg.png')",
+        }
+      }>
+        <div className='flex gap-8'>
+          <Image src="/img/why.svg" alt="why" width={56} height={56} />
+
+          <Heading className={'text-white'}>
+            Why Legite?
+          </Heading>
+        </div>
+
+        <div className='flex gap-12 mt-40 items-stretch'>
+          {
+            cards_why.map((card, index) => (
+              <Card key={index} {...card} />
+            ))
+          }
+        </div>
+
+        <div className="absolute top-0 right-0">
+          <Image src="/img/why-1.png" alt="why bg" width={160} height={100} />
         </div>
       </section>
     </>

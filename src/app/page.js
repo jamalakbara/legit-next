@@ -5,7 +5,8 @@ import Paragraph from '@/components/Paragraph/paragraph';
 import SliderAlt from '@/components/Slider Alt/sliderAlt';
 import Slider from '@/components/Slider/slider'
 import Image from 'next/image';
-import { cards_about, cards_reviews, cards_why } from '@/lib/data';
+import { cards_about, cards_reviews, cards_why, cards_services } from '@/lib/data';
+import Button from '@/components/Button/button';
 
 export default function Home() {
   return (
@@ -25,13 +26,9 @@ export default function Home() {
             With a Trusted Tax Platform and Up-to-Date Legal Information
           </Paragraph>
 
-          <button className="text-xl font-bold bg-figma-yellow flex justify-center items-center gap-2 py-6 px-8 rounded-3xl" style={
-            {
-              fontFamily: "Satoshi-Regular",
-            }
-          }>
+          <Button className={'bg-figma-yellow'}>
             Get Started Now
-          </button>
+          </Button>
         </div>
       </section>
 
@@ -68,9 +65,9 @@ export default function Home() {
       </section>
 
       {/* Why */}
-      <section className="flex flex-col gap-14 justify-center px-56 py-40  min-h-screen bg-figma-purple bg-no-repeat bg-figma-left-bottom relative" style={
+      <section className="flex flex-col gap-14 justify-center px-56 py-40  min-h-screen" style={
         {
-          backgroundImage: "url('/img/why-bg.png')",
+          background: "url('/img/why-bg.png') no-repeat left bottom 100px, url('/img/why-1.png') no-repeat right top, #5E17EB",
         }
       }>
         <div className='flex gap-8'>
@@ -88,10 +85,6 @@ export default function Home() {
             ))
           }
         </div>
-
-        <div className="absolute top-0 right-0">
-          <Image src="/img/why-1.png" alt="why bg" width={160} height={100} />
-        </div>
       </section>
 
       {/* Review */}
@@ -102,6 +95,48 @@ export default function Home() {
         </Heading>
 
         <SliderAlt sliderItems={cards_reviews} />
+      </section>
+
+      {/* Service */}
+      <section className="flex flex-col gap-40 justify-center px-56 py-40 min-h-screen" style={
+        {
+          background: 'url(/img/bulet.svg) right top 100px no-repeat, url(/img/kotak.svg) left bottom 100px no-repeat, #5E17EB'
+        }
+      }>
+          <Heading className={'text-white'}>
+            Our Services
+          </Heading>
+
+          <div className='flex flex-col gap-14'>
+            {
+              cards_services.map((card, index) => (
+                <Card key={index} {...card} />
+              ))
+            }
+          </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="flex flex-col gap-14 items-center justify-center px-[120px] py-40 bg-figma-purple">
+
+        <div className='bg-figma-yellow flex flex-col gap-12 items-center p-14 rounded-[48px]' style={
+          {
+            background: 'url(/img/cta-2.svg) right bottom no-repeat, url(/img/cta-1.svg) left top no-repeat, #FFBD59'
+          }
+        }>
+          <h1 className="text-figma-black font-bold text-[32px]">
+          Take Control of Your Cryptocurrency Taxes Today!
+          </h1>
+
+          <Paragraph>
+          Start maximizing your cryptocurrency investment returns while ensuring tax compliance.
+          </Paragraph>
+
+          <Button className={'bg-figma-purple'}>
+            Get Started Now
+          </Button>
+        </div>
       </section>
     </>
   )

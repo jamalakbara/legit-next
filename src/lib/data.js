@@ -57,3 +57,38 @@ export const cards_reviews = [
     desc: '“Legite has been an absolute game-changer for me as a cryptocurrency investor.”'
   },
 ]
+
+export const cards_services = [
+  {
+    img: {
+      src: '/img/path-purple.svg',
+      alt: 'Tax Compliance Assistance'
+    },
+    heading: 'Tax Compliance Assistance',
+    desc: 'We provide comprehensive guidance and support to cryptocurrency investors in fulfilling their tax obligations. Our platform offers tools and resources to accurately calculate and report cryptocurrency gains, losses, and transactions, ensuring compliance with tax regulations.'
+  },
+  {
+    img: {
+      src: '/img/path-yellow.svg',
+      alt: 'Real-Time Legal and Tax Updates'
+    },
+    heading: 'Real-Time Legal and Tax Updates',
+    desc: 'Stay informed about the latest legal and tax developments related to cryptocurrencies. Our platform provides up-to-date information and insights, helping investors navigate the changing landscape of cryptocurrency taxation.'
+  },
+  {
+    img: {
+      src: '/img/path-purple.svg',
+      alt: 'Personalized Tax Planning'
+    },
+    heading: 'Personalized Tax Planning',
+    desc: 'Our platform offers personalized tax planning services tailored to each investor\'s unique circumstances. We analyze their cryptocurrency holdings, investment strategies, and financial goals to develop tax-efficient strategies, maximizing their after-tax returns.'
+  },
+  {
+    img: {
+      src: '/img/path-yellow.svg',
+      alt: 'Expert Tax Accountant Network'
+    },
+    heading: 'Expert Tax Accountant Network',
+    desc: 'Gain access to a network of vetted tax accountants who specialize in cryptocurrency taxation. Our platform connects investors with experienced professionals who can provide specialized guidance, answer queries, and assist in tax preparation and filing.'
+  },
+]

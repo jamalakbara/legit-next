@@ -2,51 +2,34 @@
 import Card from '@/components/Card/card';
 import Heading from '@/components/Heading/heading';
 import Paragraph from '@/components/Paragraph/paragraph';
+import SliderAlt from '@/components/Slider Alt/sliderAlt';
 import Slider from '@/components/Slider/slider'
 import Image from 'next/image';
-
-const cards = [
-  {
-    number: 1,
-    heading: 'Develop',
-    desc: 'Develop a user-friendly website that serves as a centralized hub for accurate and up-to-date legal and tax information related to cryptocurrencies.'
-  },
-  {
-    number: 2,
-    heading: 'Provide',
-    desc: 'Provide clear and easily understandable explanations of complex tax regulations, guidelines, and reporting requirements specific to digital assets, such as cryptocurrencies.'
-  },
-  {
-    number: 3,
-    heading: 'Update',
-    desc: 'Regularly update the content to reflect any changes in tax laws and regulations to ensure investors have access to the latest information.'
-  },
-]
+import { cards_about, cards_reviews, cards_why, cards_services } from '@/lib/data';
+import Button from '@/components/Button/button';
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="flex flex-col gap-14 items-start justify-center px-56 h-[80vh] bg-figma-purple bg-no-repeat bg-contain bg-right" style={
+      <section className="flex px-56 h-[80vh] bg-figma-purple bg-no-repeat bg-contain bg-right" style={
         {
           backgroundImage: "url('/img/hero-bg.png')",
         }
       }>
-        <h1 className='text-7xl max-w-[50%]'>
-        Simplify Your <b className="text-figma-yellow">Cryptocurrency</b> Taxes
-        </h1>
+        <div className='max-w-[50%] flex flex-col gap-14 items-start justify-center'>
+          <Heading className='text-white'>
+            Simplify Your <b className="text-figma-yellow">Cryptocurrency</b> Taxes
+          </Heading>
 
-        <p className='text-xl'>
-        With a Trusted Tax Platform and Up-to-Date Legal Information
-        </p>
+          <Paragraph className='text-white'>
+            With a Trusted Tax Platform and Up-to-Date Legal Information
+          </Paragraph>
 
-        <button className="text-xl font-bold bg-figma-yellow flex justify-center items-center gap-2 py-6 px-8 rounded-3xl" style={
-          {
-            fontFamily: "Satoshi-Regular",
-          }
-        }>
-          Get Started Now
-        </button>
+          <Button className={'bg-figma-yellow'}>
+            Get Started Now
+          </Button>
+        </div>
       </section>
 
       {/* Partners */}
@@ -72,12 +55,87 @@ export default function Home() {
           </Paragraph>
         </div>
 
-        <div className='flex gap-20 items-center mt-40'>
+        <div className='flex gap-20 mt-40 items-stretch'>
           {
-            cards.map((card, index) => (
+            cards_about.map((card, index) => (
               <Card key={index} {...card} />
             ))
           }
+        </div>
+      </section>
+
+      {/* Why */}
+      <section className="flex flex-col gap-14 justify-center px-56 py-40  min-h-screen" style={
+        {
+          background: "url('/img/why-bg.png') no-repeat left bottom 100px, url('/img/why-1.png') no-repeat right top, #5E17EB",
+        }
+      }>
+        <div className='flex gap-8'>
+          <Image src="/img/why.svg" alt="why" width={56} height={56} />
+
+          <Heading className={'text-white'}>
+            Why Legite?
+          </Heading>
+        </div>
+
+        <div className='flex gap-12 mt-40 items-stretch'>
+          {
+            cards_why.map((card, index) => (
+              <Card key={index} {...card} />
+            ))
+          }
+        </div>
+      </section>
+
+      {/* Review */}
+
+      <section className="flex flex-col gap-14 items-center justify-center py-40 bg-figma-yellow">
+        <Heading>
+          What they say about us
+        </Heading>
+
+        <SliderAlt sliderItems={cards_reviews} />
+      </section>
+
+      {/* Service */}
+      <section className="flex flex-col gap-40 justify-center px-56 py-40 min-h-screen" style={
+        {
+          background: 'url(/img/bulet.svg) right top 100px no-repeat, url(/img/kotak.svg) left bottom 100px no-repeat, #5E17EB'
+        }
+      }>
+          <Heading className={'text-white'}>
+            Our Services
+          </Heading>
+
+          <div className='flex flex-col gap-14'>
+            {
+              cards_services.map((card, index) => (
+                <Card key={index} {...card} />
+              ))
+            }
+          </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="flex flex-col gap-14 items-center justify-center px-[120px] py-40 bg-figma-purple">
+
+        <div className='bg-figma-yellow flex flex-col gap-12 items-center p-14 rounded-[48px]' style={
+          {
+            background: 'url(/img/cta-2.svg) right bottom no-repeat, url(/img/cta-1.svg) left top no-repeat, #FFBD59'
+          }
+        }>
+          <h1 className="text-figma-black font-bold text-[32px]">
+          Take Control of Your Cryptocurrency Taxes Today!
+          </h1>
+
+          <Paragraph>
+          Start maximizing your cryptocurrency investment returns while ensuring tax compliance.
+          </Paragraph>
+
+          <Button className={'bg-figma-purple'}>
+            Get Started Now
+          </Button>
         </div>
       </section>
     </>

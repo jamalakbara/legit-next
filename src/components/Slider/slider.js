@@ -28,12 +28,13 @@ const images = [
 const Slider = () => {
   const [sliderRef, instanceRef] = useKeenSlider(
     {
-      slides: {
-        perView: 5,
+      breakpoints: {
+        '(min-width: 375px)': {
+          loop: true,
+          slides: { origin: "center", perView: 2.5, spacing: 48 }
+        },
       },
     },
-    [
-    ]
   )
 
   return (

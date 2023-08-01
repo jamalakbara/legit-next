@@ -17,9 +17,10 @@ const menu = [
 
 const Menu = () => {
   return (
-    <ul
-        className="flex flex-row gap-4 justify-center items-center"
-    >
+    <ul className="
+        flex flex-row gap-4 justify-center items-center
+        sm:text-xs
+    ">
         {menu.map((item, index) => (
             <li key={index}>
                 <Link href={item.link} style={

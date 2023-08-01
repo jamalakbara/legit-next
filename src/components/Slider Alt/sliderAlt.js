@@ -4,12 +4,16 @@ import Card from "../Card/card"
 
 const SliderAlt = ({sliderItems}) => {
   const [sliderRef] = useKeenSlider({
-    loop: true,
-    mode: "free",
-    slides: { origin: "center", perView: 1.5, spacing: 48 },
-    range: {
-      min: -5,
-      max: 5,
+    breakpoints: {
+      '(min-width: 375px)': {
+        loop: true,
+        mode: "free",
+        slides: { origin: "center", perView: 1.5, spacing: 20 },
+        range: {
+          min: -5,
+          max: 5,
+        },
+      },
     },
   })
 

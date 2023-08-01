@@ -6,13 +6,22 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    theme: {
+    screens: {
+      sm:' 100px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    fontFamily: {
+      sans: ['Satoshi-Medium', 'sans'],
     },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
         'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-bg': "url('/img/hero-bg.png')",
+        'about-bg': "url('/img/about-bg.png')",
       },
       colors: {
         'figma-black': '#373737',
@@ -22,11 +31,13 @@ module.exports = {
       },
       backgroundSize: {
         "figma": "486px",
+        "50%": "50%",
+        "35%": "35%",
       },
       backgroundPosition: {
-        "figma-right-top": "right top 100px",
-        "figma-left-bottom": "left bottom 100px",
-        "figma-real-right-bottom": "right bottom",
+        "right-top-100": "right top 100px",
+        "rigth--50%": "right -200px top",
+        "right-top-250": "right top 250px",
       }
     },
   },

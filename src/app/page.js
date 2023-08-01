@@ -136,13 +136,13 @@ export default function Home() {
           {
             cards_about.map((card, index) => (
               <div
+                key={index} 
                 data-aos="zoom-in"
                 data-aos-duration="500"
                 data-aos-delay={index * 50}
                 data-aos-easing="ease-in-out"
               >
                   <Card 
-                    key={index} 
                     {...card} 
                     className='xl:max-w-xl'
                   />
@@ -199,13 +199,13 @@ export default function Home() {
           {
             cards_why.map((card, index) => (
               <div
+                key={index} 
                 data-aos="zoom-in"
                 data-aos-duration="500"
                 data-aos-delay={index * 50}
                 data-aos-easing="ease-in-out"
               >
                 <Card 
-                  key={index} 
                   {...card} 
                   className='xl:max-w-xl'
                 />
@@ -272,13 +272,13 @@ export default function Home() {
             {
               cards_services.map((card, index) => (
                 <div
+                  key={index} 
                   data-aos="zoom-in"
                   data-aos-duration="500"
                   data-aos-delay={index * 50}
                   data-aos-easing="ease-in-out"
                 >
                   <Card 
-                    key={index} 
                     {...card} 
                   />
                 </div>

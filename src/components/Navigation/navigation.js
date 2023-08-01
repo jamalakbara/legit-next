@@ -8,6 +8,7 @@ const Navigation = () => {
       sm:px-7 sm:grid-cols-2 sm:gap-7
       md:px-14 md:grid-cols-3
       lg:px-[120px]
+      xl:px-[10%]
     ">
         <Logo />
 

@@ -5,7 +5,7 @@ import HeadingAlt from "../Heading/headingAlt"
 const Card = ({img, heading, desc, number, className}) => {
   return (
     <div className={`
-      text-figma-black p-14 flex flex-col gap-8 bg-white rounded-3xl relative flex-1 
+      text-figma-black p-14 flex flex-col gap-8 bg-white rounded-3xl relative flex-1  w-full h-full
       sm:p-7 sm:gap-4
       md:p-10 md:gap-6
       lg:p-14 lg:gap-8

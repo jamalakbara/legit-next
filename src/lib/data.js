@@ -92,3 +92,18 @@ export const cards_services = [
     desc: 'Gain access to a network of vetted tax accountants who specialize in cryptocurrency taxation. Our platform connects investors with experienced professionals who can provide specialized guidance, answer queries, and assist in tax preparation and filing.'
   },
 ]
+
+export const menu = [
+  {
+      name: "Solution",
+      link: "#solution"
+  },
+  {
+      name: "Benefit",
+      link: "#benefit"
+  },
+  {
+      name: "Services",
+      link: "#services"
+  }
+]

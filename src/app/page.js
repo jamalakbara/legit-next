@@ -14,13 +14,15 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="
-        flex px-56 h-[80vh] bg-figma-purple bg-hero-bg bg-no-repeat bg-contain bg-right
+        flex px-56 h-[80vh] bg-figma-purple bg-hero-bg bg-no-repeat bg-contain
         sm:px-7 sm:bg-rigth--50%
         md:px-14
+        lg:px-28 lg:bg-right
       ">
         <div className='
-          max-w-[50%] flex flex-col gap-14 items-start justify-center
+          flex flex-col gap-14 items-start justify-center
           sm:max-w-full sm:gap-7
+          lg:max-w-[50%] lg:gap-14
         '>
           <Heading className='text-white'>
             Simplify Your <b className="text-figma-yellow">Cryptocurrency</b> Taxes
@@ -40,6 +42,7 @@ export default function Home() {
       <section className="
         flex flex-col gap-14 items-center justify-center px-[120px] h-[20vh] bg-figma-white
         sm:px-0
+        lg:px-28
       ">
         <Slider />
       </section>
@@ -48,14 +51,19 @@ export default function Home() {
       <section className="
         flex flex-col gap-14 justify-center px-56 py-40  min-h-screen bg-figma-yellow bg-about-bg bg-no-repeat bg-right-top-100 bg-figma
         sm:p-7 sm:bg-50% sm:bg-right-top-250
+        md:px-14 md:py-20
+        lg:px-28 lg:bg-right-top-100 lg:bg-figma
       ">
         <div className='
           flex flex-col gap-14 max-w-[50%]
           sm:max-w-full sm:gap-7
+          lg:max-w-[50%] lg:gap-14
         '>
           <div className='
             flex flex-col w-14 h-14 relative
             sm:w-7 sm:h-7
+            md:w-10 md:h-10
+            lg:w-14 lg:h-14
           '>
             <Image src="/img/hub.svg" alt="hub" fill style={
               {
@@ -75,8 +83,10 @@ export default function Home() {
         </div>
 
         <div className='
-          flex gap-20 mt-40 items-stretch
+          flex gap-20 mt-40
           sm:gap-7 sm:mt-7 sm:flex-col sm:items-center
+          md:item-stretch
+          lg:gap-14 lg:mt-14 lg:flex-row lg:items-stretch
         '>
           {
             cards_about.map((card, index) => (
@@ -90,6 +100,8 @@ export default function Home() {
       <section className="
         flex flex-col gap-14 justify-center px-56 py-40  min-h-screen bg-no-repeat bg-figma-purple bg-[url('/img/why-bg.png'),_url('/img/why-1.png')] bg-[position:left_bottom_100px,_right_top]
         sm:p-7
+        md:px-14 md:py-20
+        lg:px-28 lg:bg-[url('/img/why-bg.png'),_url('/img/why-1.png')] lg:bg-[position:left_bottom_100px,_right_top]
       " 
       >
         <div className='
@@ -99,6 +111,8 @@ export default function Home() {
           <div className='
             flex flex-col w-14 h-14 relative
             sm:w-7 sm:h-7
+            md:w-10 md:h-10
+            lg:w-14 lg:h-14
           '>
             <Image src="/img/why.svg" alt="why" fill style={
               {
@@ -116,6 +130,8 @@ export default function Home() {
         <div className='
           flex gap-12 mt-40 items-stretch
           sm:gap-7 sm:mt-7 sm:flex-col sm:items-center
+          md:item-stretch
+          md:gap-14 md:mt-14 md:flex-row md:items-stretch
         '>
           {
             cards_why.map((card, index) => (
@@ -130,6 +146,8 @@ export default function Home() {
       <section className="
         flex flex-col gap-14 items-center justify-center py-40 bg-figma-yellow
         sm:py-7
+        md:py-20
+        lg:py-28
       ">
         <Heading className='px-7 text-center'>
           What they say about us
@@ -141,7 +159,9 @@ export default function Home() {
       {/* Service */}
       <section className="
         flex flex-col gap-40 justify-center px-56 py-40 min-h-screen bg-no-repeat bg-figma-purple bg-[url(/img/bulet.svg),_url(/img/kotak.svg)] bg-[position:right_top_100px,_left_bottom_100px]
-        sm:p-7 sm:bg-[url(/img/bulet.svg),_url(/img/kotak.svg)] sm:bg-[position:right_top_50px,_left_bottom_50px] bg-50% sm:gap-20
+        sm:p-7 sm:bg-[url(/img/bulet.svg),_url(/img/kotak.svg)] sm:bg-[position:right_top_50px,_left_bottom_50px] sm:bg-50% sm:gap-20
+        md:px-14 md:py-20
+        lg:px-28 lg:bg-[url(/img/bulet.svg),_url(/img/kotak.svg)] lg:bg-[position:right_top_100px,_left_bottom_100px] lg:gap-28 lg:bg-25%
       ">
           <Heading className={'text-white'}>
             Our Services
@@ -164,11 +184,15 @@ export default function Home() {
       <section className="
         flex flex-col gap-14 items-center justify-center px-[120px] py-40 bg-figma-purple
         sm:p-7 sm:gap-7
+        md:px-14 md:py-20
+        lg:px-28 lg:py-28
       ">
 
         <div className='
           flex flex-col gap-12 items-center p-14 text-center rounded-[48px] bg-no-repeat bg-figma-yellow bg-[url(/img/cta-1.svg),_url(/img/cta-2.svg)] bg-[position:left_top,_right_bottom]
           sm:p-7 sm:gap-7
+          md:p-14 md:gap-14
+          lg:p-28
         '>
           <HeadingAlt className='text-figma-black'>
             Take Control of Your Cryptocurrency Taxes Today!

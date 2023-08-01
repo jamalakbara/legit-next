@@ -21,7 +21,7 @@ const SliderAlt = ({sliderItems}) => {
     <div ref={sliderRef} className="keen-slider">
       {
         sliderItems.map((item, index) => (
-          <Card key={index} desc={item.desc} className={`keen-slider__slide number-slide${index} border-4 border-figma-black`} />
+          <Card key={index} desc={item.desc} className={`keen-slider__slide number-slide${index} border-4 border-figma-black sm:justify-center`} />
         ))
       }
     </div>

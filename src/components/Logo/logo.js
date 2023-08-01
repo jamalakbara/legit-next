@@ -7,6 +7,8 @@ const Logo = () => {
       <div className="
         flex flex-col w-40 h-12 relative
         sm:w-20 sm:h-6
+        md:w-28 md:h-8
+        lg:w-40 lg:h-12
       ">
         <Image src="/img/logo.png" alt="logo" fill style={
           {

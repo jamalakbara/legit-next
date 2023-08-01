@@ -6,6 +6,7 @@ const Paragraph = ({children, className}) => {
       text-figma-black text-xl ${className}
       sm:text-xs
       md:text-base
+      lg:text-xl
     `}>
       {children}
     </p>

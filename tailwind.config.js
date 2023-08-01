@@ -33,6 +33,7 @@ module.exports = {
         "figma": "486px",
         "50%": "50%",
         "35%": "35%",
+        "25%": "25%",
       },
       backgroundPosition: {
         "right-top-100": "right top 100px",

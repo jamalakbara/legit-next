@@ -53,7 +53,7 @@ export default function Home() {
         sm:p-7 sm:bg-50% sm:bg-right-top-250
         md:px-14 md:py-20
         lg:px-28 lg:bg-right-top-100 lg:bg-figma
-      ">
+      " id='solution'>
         <div className='
           flex flex-col gap-14 max-w-[50%]
           sm:max-w-full sm:gap-7
@@ -102,7 +102,8 @@ export default function Home() {
         sm:p-7
         md:px-14 md:py-20
         lg:px-28 lg:bg-[url('/img/why-bg.png'),_url('/img/why-1.png')] lg:bg-[position:left_bottom_100px,_right_top]
-      " 
+      "
+      id='benefit' 
       >
         <div className='
           flex items-center gap-8
@@ -162,7 +163,7 @@ export default function Home() {
         sm:p-7 sm:bg-[url(/img/bulet.svg),_url(/img/kotak.svg)] sm:bg-[position:right_top_50px,_left_bottom_50px] sm:bg-50% sm:gap-20
         md:px-14 md:py-20
         lg:px-28 lg:bg-[url(/img/bulet.svg),_url(/img/kotak.svg)] lg:bg-[position:right_top_100px,_left_bottom_100px] lg:gap-28 lg:bg-25%
-      ">
+      " id='services'>
           <Heading className={'text-white'}>
             Our Services
           </Heading>

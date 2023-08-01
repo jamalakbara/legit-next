@@ -10,9 +10,15 @@ import Button from '@/components/Button/button';
 import HeadingAlt from '@/components/Heading/headingAlt';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 export default function Home() {
-  AOS.init();
+
+  useEffect(() => {
+    AOS.init()
+  
+  }, [])
+
   return (
     <>
       {/* Hero */}

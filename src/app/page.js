@@ -171,6 +171,8 @@ export default function Home() {
           <div className='
             flex flex-col gap-14
             sm:gap-7
+            md:gap-14
+            lg:gap-28
           '>
             {
               cards_services.map((card, index) => (

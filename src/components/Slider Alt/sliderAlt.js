@@ -59,7 +59,7 @@ const SliderAlt = ({sliderItems}) => {
   )
 
   return (
-    <div ref={sliderRef} className="keen-slider">
+    <div ref={sliderRef} className="keen-slider flex items-stretch">
       {
         sliderItems.map((item, index) => (
           <Card key={index} desc={item.desc} className={`keen-slider__slide number-slide${index} border-4 border-figma-black sm:justify-center xl:max-w-xl`} />

@@ -147,6 +147,7 @@ export default function Home() {
                 data-aos-duration="500"
                 data-aos-delay={index * 50}
                 data-aos-easing="ease-in-out"
+                className='flex'
               >
                   <Card 
                     {...card} 
@@ -200,7 +201,8 @@ export default function Home() {
           flex gap-12 mt-40 items-stretch
           sm:gap-7 sm:mt-7 sm:flex-col sm:items-center
           md:item-stretch
-          md:gap-14 md:mt-14 md:flex-row md:items-stretch
+          md:gap-7 md:mt-14 md:flex-col md:items-stretch
+          lg:gap-14 lg:mt-14 lg:flex-row lg:items-stretch
         '>
           {
             cards_why.map((card, index) => (
@@ -210,6 +212,7 @@ export default function Home() {
                 data-aos-duration="500"
                 data-aos-delay={index * 50}
                 data-aos-easing="ease-in-out"
+                className='flex'
               >
                 <Card 
                   {...card} 
